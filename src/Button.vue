@@ -1,13 +1,15 @@
 <template>
-    <button type="{{ $props.type }}">{{ $props.title }}</button>
+  <a :href="$props.url" :style="styles" class="btn" @click="onClick">
+    {{ $props.title }}
+  </a>
 </template>
 
 <script>
+import '../../assets/button.scss';
+
 export default {
     name: 'Button',
-    props: [
-        'type',
-        'title'
-    ],
-}
+    props: [ 'url', 'title' ],
+    emits: ['click']
+};
 </script>

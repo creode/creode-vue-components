@@ -1,4 +1,4 @@
-import Teaser from "./src/Teaser.vue";
+import Card from "./src/Card.vue";
 import Button from "./src/Button.vue";
 
-export { Teaser, Button };
+export { Card, Button };
