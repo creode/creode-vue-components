@@ -35,9 +35,9 @@
 </template>
 
 <script>
-    import '../assets/scss/card.scss';
+    import '../assets/css/card.css';
     import { reactive, computed } from 'vue';
-    import Button from '../Button/Button.vue';
+    import Button from './Button.vue';
 
     export default {
         name: 'Card',
