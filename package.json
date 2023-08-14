@@ -10,10 +10,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "gulp": "^4.0.2",
     "vue": "^3.3.4"
   },
   "devDependencies": {
-    "sass": "^1.65.1",
-    "sass-loader": "^13.3.2"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.65.1"
   }
 }
