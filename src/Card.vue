@@ -35,7 +35,6 @@
 </template>
 
 <script>
-    import '../assets/css/card.css';
     import { reactive, computed } from 'vue';
     import Button from './Button.vue';
 

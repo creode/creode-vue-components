@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import '../assets/css/button.css';
-
 export default {
     name: 'Button',
     props: [ 'url', 'title' ],
