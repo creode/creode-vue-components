@@ -1,13 +1,13 @@
 {
-  "name": "vue3-customised-component-library",
+  "name": "creode-component-library",
   "version": "1.0.0",
-  "description": "",
+  "description": "A library of generic VUE.js component.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "Creode Limited <dev@creode.co.uk> (https://www.creode.co.uk/)",
   "license": "ISC",
   "dependencies": {
     "gulp": "^4.0.2",
