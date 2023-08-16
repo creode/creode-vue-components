@@ -1,7 +1,7 @@
 {
   "name": "creode-component-library",
   "version": "2.0.0",
-  "description": "A library of generic VUE.js component.",
+  "description": "A library of generic VUE.js components.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
