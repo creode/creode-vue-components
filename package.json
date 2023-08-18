@@ -1,6 +1,6 @@
 {
   "name": "creode-component-library",
-  "version": "2.0.0",
+  "version": "4.0.0",
   "description": "A library of generic VUE.js components.",
   "main": "index.js",
   "scripts": {
