@@ -1,11 +1,23 @@
 <template>
 	<p class="teaser__text">
-		<slot></slot>
+		<component :is="href ? 'a' : 'span'" :href="href" :target="target" class="teaser__text-inner">
+			<slot></slot>
+		</component>
 	</p>
 </template>
 
 <script>
 	export default {
-		name: 'text'
+		name: 'text',
+		props: {
+			href: {
+				type: String,
+				default: ''
+			},
+			target: {
+				type: String,
+				default: ''
+			}
+		}
 	};
 </script>

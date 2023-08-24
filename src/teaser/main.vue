@@ -1,11 +1,13 @@
 <template>
 	<div class="teaser__wrapper" :class="modifierClasses">
-		<div class="teaser__image-wrapper" v-if="$slots.image">
-			<slot name="image"></slot>
-		</div>
-		<div class="teaser__content">
-			<slot></slot>
-		</div>
+		<component :is="href ? 'a' : 'div'" :href="href" :target="target" class="teaser__inner">
+			<component v-if="$slots.image" :is="imagehref ? 'a' : 'div'" :href="imagehref" :target="target" class="teaser__image-wrapper">
+				<slot name="image"></slot>
+			</component>
+			<div class="teaser__content">
+				<slot></slot>
+			</div>
+		</component>
 	</div>
 </template>
 
@@ -16,7 +18,19 @@
 			format: {
 				type: Number,
 				default: 1
-			}
+			},
+			href: {
+				type: String,
+				default: ''
+			},
+			imagehref: {
+				type: String,
+				default: ''
+			},
+			target: {
+				type: String,
+				default: ''
+			},
 		},
 		data: function() {
 			return {

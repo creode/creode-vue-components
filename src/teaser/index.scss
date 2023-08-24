@@ -51,7 +51,12 @@
 		background-color: $background-color;
 	}
 
+	.teaser__inner {
+		display: block;
+	}
+
 	.teaser__image-wrapper {
+		display: block;
 		position: relative;
 		padding-bottom: $image-aspect-ratio * 100%;
 
