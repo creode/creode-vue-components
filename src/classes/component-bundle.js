@@ -2,6 +2,7 @@ class ComponentBundle {
 
 	#name = null;
 	#mainComponent = null;
+	#fromJsonComponent = null;
   #subComponents = {};
 
 	constructor(name) {
@@ -10,6 +11,10 @@ class ComponentBundle {
 
 	addMainComponent(mainComponent) {
 		this.#mainComponent = mainComponent;
+	}
+
+	addFromJsonComponent(fromJsonComponent) {
+		this.#fromJsonComponent = fromJsonComponent;
 	}
 
 	addSubComponent(name, subComponent) {
@@ -21,6 +26,10 @@ class ComponentBundle {
 
 		if(this.#mainComponent) {
 			components[this.#name] = this.#mainComponent;
+		}
+
+		if(this.#fromJsonComponent) {
+			components[this.#name + 'fromjson'] = this.#fromJsonComponent;
 		}
 
 		for(const subComponentName in this.#subComponents) {
