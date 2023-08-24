@@ -126,6 +126,7 @@
 	}
 
 	.grid__item {
+		display: flex;
 		box-sizing: border-box;
 		width: 100%;
 		padding: 0 $horizontal-gutter * 0.5 $vertical-gutter;
@@ -136,6 +137,10 @@
 
 		@media only screen and (min-width: $breakpoint-large) {
 			width: calc(100% / $breakpoint-large-items-per-row);
+		}
+
+		& > * {
+			flex-basis: 100%;
 		}
 	}
 
