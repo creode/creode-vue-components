@@ -1,4 +1,4 @@
-import teaser from "./src/teaser/index.js";
+import teaser from "./src/components/teaser/index.js";
 
 export {
 	teaser
