@@ -1,5 +1,6 @@
 @use '../globals.scss';
 
+/// @param number $maximum-width - The maximum width of the grid. Please note this is not the width of the outer wrapper.
 /// @param number $vertical-outer-space - Additional space to be added to the top and bottom of the component.
 /// @param number $vertical-gutter - The vertical space between grid items.
 /// @param number $horizontal-gutter - The horizontal space between grid items.
@@ -10,6 +11,7 @@
 /// @param number $breakpoint-large-items-per-row - The items per row on large size browsers.
 /// @param number $breakpoint-large-vertical-outer-space - Additional space to be added to the top and bottom of the component on large size browsers.
 @mixin configure(
+	$maximum-width: null,
 	$vertical-outer-space: null,
 	$vertical-gutter: null,
 	$horizontal-gutter: null,
@@ -21,8 +23,14 @@
 	$breakpoint-large-vertical-outer-space: null
 ) {
 
+	@if $maximum-width {
+		$maximum-width: $maximum-width !global;
+	} @else {
+		$maximum-width: globals.$maximum-width !global;
+	}
+
 	@if $vertical-outer-space {
-		$vertical-outer-space: $vertical-outer-space!global;
+		$vertical-outer-space: $vertical-outer-space !global;
 	} @else {
 		$vertical-outer-space: globals.$space-vertical !global;
 	}
@@ -81,8 +89,7 @@
 
 	.grid__wrapper {
 		overflow: hidden;
-		padding-top: $vertical-outer-space;
-		padding-bottom: $vertical-outer-space - $vertical-gutter;
+		padding: $vertical-outer-space $horizontal-gutter $vertical-outer-space - $vertical-gutter;
 
 		@media only screen and (min-width: $breakpoint-medium) {
 			padding-top: $breakpoint-medium-vertical-outer-space;
@@ -117,6 +124,12 @@
 				margin-bottom: $vertical-gutter * -1;
 			}
 		}
+	}
+
+	.grid__inner {
+		max-width: $maximum-width;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.grid__items {
