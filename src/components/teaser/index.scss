@@ -40,7 +40,7 @@
 	@if $background-color {
 		$background-color: $background-color !global;
 	} @else {
-		$background-color: grey !global;
+		$background-color: globals.$color-b !global;
 	}
 
 }
