@@ -26,14 +26,17 @@ class ComponentBundle {
 
 		if(this.#mainComponent) {
 			components[this.#name] = this.#mainComponent;
+			components[this.#name].name = this.#name;
 		}
 
 		if(this.#fromJsonComponent) {
 			components[this.#name + 'fromjson'] = this.#fromJsonComponent;
+			components[this.#name + 'fromjson'].name = this.#name + 'fromjson';
 		}
 
 		for(const subComponentName in this.#subComponents) {
 			components[this.#name + subComponentName] = this.#subComponents[subComponentName];
+			components[this.#name + subComponentName].name = this.#name + subComponentName;
 		}
 
 		return components;
