@@ -12,6 +12,10 @@
 	export default {
 		name: 'main',
 		props: {
+			format: {
+				type: Number,
+				default: 1
+			},
 			reducebottomspace: {
 				type: Boolean,
 				default: false
@@ -24,9 +28,19 @@
 		},
 		methods: {
 			getModifierClasses: function() {
+				const base = 'grid__wrapper--';
+
+				var modifierClasses = [
+					'format-' + this.format 
+				];
+
 				var returnable = {};
 
-				returnable['grid__wrapper--reduce-bottom-space'] = this.reducebottomspace;
+				for(var i=0; i<modifierClasses.length; i++) {
+					returnable[base + modifierClasses[i]] = true;
+				}
+
+				returnable[base + 'reduce-bottom-space'] = this.reducebottomspace;
 
 				return returnable;
 			}
