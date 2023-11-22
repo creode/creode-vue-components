@@ -20,10 +20,6 @@
 			format: {
 				type: Number,
 				default: 1
-			},
-			reducebottomspace: {
-				type: Boolean,
-				default: false
 			}
 		},
 		data: function() {
@@ -44,8 +40,6 @@
 				for(var i=0; i<modifierClasses.length; i++) {
 					returnable[base + modifierClasses[i]] = true;
 				}
-
-				returnable[base + 'reduce-bottom-space'] = this.reducebottomspace;
 
 				return returnable;
 			}
