@@ -1,0 +1,36 @@
+@use '../globals.scss';
+
+@mixin configure(
+	$space-vertical: null,
+	$internal-vertical-space-proportion: null,
+) {
+
+	@if $space-vertical {
+		$space-vertical: $space-vertical !global;
+	} @else {
+		$space-vertical: globals.$space-vertical !global;
+	}
+
+	@if $internal-vertical-space-proportion {
+		$internal-vertical-space-proportion: $internal-vertical-space-proportion !global;
+	} @else {
+		$internal-vertical-space-proportion: 0.5 !global;
+	}
+
+}
+
+@mixin render() {
+    .accordion__item {
+		padding-top: $space-vertical;
+		padding-bottom: $space-vertical - ($space-vertical * $internal-vertical-space-proportion);
+	}
+
+    .accordion__item-header {
+        width: 100%;
+        border: solid 1px #000;
+    }
+
+    .accordion__item-panel {
+        border: solid 1px 1px 1px #000;
+    }
+}

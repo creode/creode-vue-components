@@ -1,11 +1,11 @@
 <template>
-  <div class="accordion-item">
-    <h3>
+  <div class="accordion__item">
+    <h3 class="accordion__item-header">
       <button
         @click="toggle" 
         :aria-expanded="isOpen"
         :aria-controls="sectionId"
-        class="accordion-trigger"
+        class="accordion__item-header--trigger"
         :id="buttonId">
         <slot name="heading"></slot>
       </button>
@@ -14,7 +14,7 @@
       <div v-show="isOpen" :id="sectionId"
           role="region"
           :aria-labelledby="buttonId"
-          class="accordion-panel"
+          class="accordion__item-panel"
           ref="content"
         >
         <slot></slot>

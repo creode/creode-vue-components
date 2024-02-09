@@ -1,5 +1,7 @@
 <template>
-    <slot></slot>
+    <div class="accordion__wrapper">
+        <slot></slot>
+    </div>
 </template>
 
 <script>
