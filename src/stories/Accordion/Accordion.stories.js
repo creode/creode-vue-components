@@ -5,6 +5,13 @@ export default {
   title: 'Creode/Accordion',
   component: Accordion,
   tags: ['autodocs'],
+  parameters: {
+    docs: {
+      description: {
+        component: 'The accordion component can be used to make a list of items collapsible. It is made up of an accordion component and accordion item components. The accordion component is a wrapper for the accordion items. The accordion item component is a wrapper for the content and heading of each item. The heading is a slot and the content is a default slot. The heading is used to trigger the collapse of the content. The content is hidden by default and is shown when the heading is clicked.',
+      },
+    }
+  }
 };
 
 const Template = (args) => ({
