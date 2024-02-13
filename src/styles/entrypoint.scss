@@ -1,8 +1,4 @@
-@use './../components/globals.scss';
+@use './../components/accordion';
 
-// Path: src/components/accordion/index.scss
-@use './../components/accordion/index.scss';
-
-.test {
-    background-color: red;
-}
+@include accordion.configure();
+@include accordion.render();
