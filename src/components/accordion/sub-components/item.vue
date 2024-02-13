@@ -29,7 +29,7 @@ import { ref, inject } from 'vue';
 import TransitionExpand from '../../transition-expand/main.vue';
 
 export default {
-  name: 'AccordionItem',
+  name: 'Item',
   components: {
     TransitionExpand
   },

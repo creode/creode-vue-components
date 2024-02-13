@@ -3,7 +3,7 @@ class ComponentBundle {
 	#name = null;
 	#mainComponent = null;
 	#fromJsonComponent = null;
-  #subComponents = {};
+	#subComponents = {};
 
 	constructor(name) {
 		this.#name = name;
@@ -35,8 +35,9 @@ class ComponentBundle {
 		}
 
 		for(const subComponentName in this.#subComponents) {
-			components[this.#name + subComponentName] = this.#subComponents[subComponentName];
-			components[this.#name + subComponentName].name = this.#name + subComponentName;
+			let subcomponentKey = this.#name + '-' + subComponentName;
+			components[subcomponentKey] = this.#subComponents[subComponentName];
+			components[subcomponentKey].name = subcomponentKey;
 		}
 
 		return components;
