@@ -11,11 +11,12 @@
       </button>
     </h3>
     <transition-expand>
-      <div v-show="isOpen" :id="sectionId"
+      <div :id="sectionId"
           role="region"
           :aria-labelledby="buttonId"
           class="accordion__item-panel"
           ref="content"
+          :hidden="!isOpen ? 'hidden' : null"
         >
         <slot></slot>
       </div>
