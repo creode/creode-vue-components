@@ -2,7 +2,7 @@
   <div class="accordion__item">
     <h3 class="accordion__item-header">
       <button
-        @click="toggle" 
+        @click="toggle"
         :aria-expanded="isOpen"
         :aria-controls="sectionId"
         class="accordion__item-header--trigger"
@@ -10,29 +10,25 @@
         <slot name="heading"></slot>
       </button>
     </h3>
-    <transition-expand>
+    <transition>
       <div :id="sectionId"
           role="region"
           :aria-labelledby="buttonId"
-          class="accordion__item-panel"
+          :class="{'accordion__item-panel': true, 'accordion__item-panel-collapsed': !isOpen}"
           ref="content"
-          :hidden="!isOpen ? 'hidden' : null"
+          :aria-hidden="!isOpen ? 'true' : 'false'"
         >
         <slot></slot>
       </div>
-    </transition-expand>
+    </transition>
   </div>
 </template>
 
 <script>
 import { ref, inject } from 'vue';
-import TransitionExpand from '../../transition-expand/main.vue';
 
 export default {
   name: 'Item',
-  components: {
-    TransitionExpand
-  },
   props: {
     index: {
       type: String,
