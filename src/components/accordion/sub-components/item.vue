@@ -5,7 +5,7 @@
         @click="toggle"
         :aria-expanded="isOpen"
         :aria-controls="sectionId"
-        class="accordion__item-header--trigger"
+        class="accordion__item-header-trigger"
         :id="buttonId">
         <slot name="heading"></slot>
       </button>
@@ -14,7 +14,7 @@
       <div :id="sectionId"
           role="region"
           :aria-labelledby="buttonId"
-          :class="{'accordion__item-panel': true, 'accordion__item-panel-collapsed': !isOpen}"
+          :class="{'accordion__item-panel': true, 'accordion__item-panel--collapsed': !isOpen}"
           ref="content"
           :aria-hidden="!isOpen ? 'true' : 'false'"
         >
