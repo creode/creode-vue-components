@@ -1,5 +1,5 @@
 import Accordion from '../../components/accordion/main.vue';
-import AccordionItem from '../../components/accordion/sub-components/accordion-item.vue';
+import AccordionItem from '../../components/accordion/sub-components/item.vue';
 
 export default {
   title: 'Creode/Accordion',
