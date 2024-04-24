@@ -1,6 +1,6 @@
 {
-  "_from": "creode-components@1.2.0",
-  "_id": "creode-components@1.2.0",
+  "_from": "creode-components@1.3.1",
+  "_id": "creode-components@1.3.1",
   "_inBundle": false,
   "_integrity": "sha512-FnJHU76g3FLkJF/UvmuRMcxV6CgyzFvzuUHrR/vFB3VS8CHC0Gifql2t3I2q8nEIumCHxi2ZWFkSdLHxS4DR2Q==",
   "_location": "/creode-components",
@@ -8,20 +8,20 @@
   "_requested": {
     "type": "version",
     "registry": true,
-    "raw": "creode-components@1.2.0",
+    "raw": "creode-components@1.3.1",
     "name": "creode-components",
     "escapedName": "creode-components",
-    "rawSpec": "1.2.0",
+    "rawSpec": "1.3.1",
     "saveSpec": null,
-    "fetchSpec": "1.2.0"
+    "fetchSpec": "1.3.1"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/creode-components/-/creode-components-1.2.0.tgz",
+  "_resolved": "https://registry.npmjs.org/creode-components/-/creode-components-1.3.1.tgz",
   "_shasum": "8f2d74119c5b82a5f216ef5cb5bbd8168fb8cf95",
-  "_spec": "creode-components@1.2.0",
+  "_spec": "creode-components@1.3.1",
   "_where": "/Users/benleonard/Development/Creode/creode-component-library-boilerplate",
   "author": {
     "name": "Creode Limited",
@@ -68,5 +68,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "1.2.0"
+  "version": "1.3.1"
 }
