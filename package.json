@@ -1,21 +1,40 @@
 {
-  "name": "creode-components",
-  "version": "1.2.0",
-  "description": "A library of general use VUE.js components.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+  "_from": "creode-components@1.2.0",
+  "_id": "creode-components@1.2.0",
+  "_inBundle": false,
+  "_integrity": "sha512-FnJHU76g3FLkJF/UvmuRMcxV6CgyzFvzuUHrR/vFB3VS8CHC0Gifql2t3I2q8nEIumCHxi2ZWFkSdLHxS4DR2Q==",
+  "_location": "/creode-components",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "creode-components@1.2.0",
+    "name": "creode-components",
+    "escapedName": "creode-components",
+    "rawSpec": "1.2.0",
+    "saveSpec": null,
+    "fetchSpec": "1.2.0"
   },
-  "keywords": [],
-  "author": "Creode Limited <dev@creode.co.uk> (https://www.creode.co.uk/)",
-  "license": "ISC",
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/creode-components/-/creode-components-1.2.0.tgz",
+  "_shasum": "8f2d74119c5b82a5f216ef5cb5bbd8168fb8cf95",
+  "_spec": "creode-components@1.2.0",
+  "_where": "/Users/benleonard/Development/Creode/creode-component-library-boilerplate",
+  "author": {
+    "name": "Creode Limited",
+    "email": "dev@creode.co.uk",
+    "url": "https://www.creode.co.uk/"
+  },
+  "bundleDependencies": false,
   "dependencies": {
     "@storybook/preset-scss": "^1.0.3",
     "vue": "^3.3.4"
   },
-  "type": "module",
+  "deprecated": false,
+  "description": "A library of general use VUE.js components.",
   "devDependencies": {
     "@storybook/addon-a11y": "^7.6.14",
     "@storybook/addon-essentials": "^7.6.14",
@@ -38,5 +57,16 @@
     "storybook": "^7.6.14",
     "style-loader": "^3.3.4",
     "vue-loader": "^17.4.2"
-  }
+  },
+  "keywords": [],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "creode-components",
+  "scripts": {
+    "build-storybook": "storybook build",
+    "storybook": "storybook dev -p 6006",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "version": "1.2.0"
 }
