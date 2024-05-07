@@ -7,7 +7,7 @@ import tab from './sub-components/tab.vue';
 var bundle = new ComponentBundle('tabbed-content');
 
 bundle.addMainComponent(main);
-bundle.addSubComponent('tabbed-content-content', content);
-bundle.addSubComponent('tabbed-content-tab', tab);
+bundle.addSubComponent('content', content);
+bundle.addSubComponent('tab', tab);
 
 export default bundle;
