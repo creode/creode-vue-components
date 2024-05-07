@@ -13,7 +13,7 @@ export default {
   name: 'tab-content-item',
   props: {
     index: {
-      type: String,
+      type: Number,
       required: true
     }
   },
