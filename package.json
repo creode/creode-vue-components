@@ -1,6 +1,5 @@
 {
   "_from": "creode-components@1.4.0",
-  "_id": "creode-components@1.4.0",
   "_inBundle": false,
   "_integrity": "sha512-FnJHU76g3FLkJF/UvmuRMcxV6CgyzFvzuUHrR/vFB3VS8CHC0Gifql2t3I2q8nEIumCHxi2ZWFkSdLHxS4DR2Q==",
   "_location": "/creode-components",
@@ -67,5 +66,5 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "type": "module",
-  "version": "1.4.0"
+  "version": "1.5.0"
 }
