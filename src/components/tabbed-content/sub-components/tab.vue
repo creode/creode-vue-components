@@ -19,7 +19,7 @@ export default {
   name: 'Tab',
   props: {
     index: {
-      type: [String, Number],
+      type: Number,
       required: true
     }
   },
