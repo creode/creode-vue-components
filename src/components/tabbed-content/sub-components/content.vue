@@ -1,7 +1,9 @@
 <template>
-  <div v-show="isVisible">
-    <slot></slot>
-  </div>
+  <transition>
+    <div v-show="isVisible">
+      <slot></slot>
+    </div>
+  </transition>
 </template>
 
 <script>
