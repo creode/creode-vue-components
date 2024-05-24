@@ -25,6 +25,7 @@
 						</nav>
 					</div>
 				</div>
+        <slot name="search"></slot>
 			</div>
 		</div>
 	</header>
