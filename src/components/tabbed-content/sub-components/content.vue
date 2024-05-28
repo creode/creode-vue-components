@@ -1,6 +1,6 @@
 <template>
   <transition>
-    <div v-show="isVisible">
+    <div :class="{'hide-content': ! isVisible}">
       <slot></slot>
     </div>
   </transition>
