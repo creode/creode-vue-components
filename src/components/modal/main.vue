@@ -1,22 +1,22 @@
 <template>
   <div class="modal">
     <div class="modal__trigger">
-      <a href="#" @click.prevent="modalOpen = !modalOpen">
+      <a href="#" @click.prevent="triggerModal">
         <slot name="trigger-content"></slot>
       </a>
     </div>
-    <Teleport :to="overlayLocation" v-if="isMounted">
-      <Transition name="model-overlay">
-        <div class="modal__overlay" v-if="modalOpen" @click="modalOpen = false">
-          <div class="modal__content" v-if="modalOpen">
-            <div class="modal__close-wrapper">
-              <button class="modal__close" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
-            </div>
-            <slot></slot>
+
+    <Transition name="model-overlay">
+      <div class="modal__overlay" v-show="modalOpen" @click="modalOpen = false">
+        <div role="dialog" :id="modalId" aria-labelledby="{{ modalId }}_label" aria-model="true" class="modal__content" v-if="modalOpen">
+          <div class="modal__close-wrapper">
+            <button ref="modal_close_button" class="modal__close" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
           </div>
+          <h2 id="{{ modalId }}_label" class="modal__label">{{  modalLabel }}</h2>
+          <slot></slot>
         </div>
-      </Transition>
-    </Teleport>
+      </div>
+    </Transition>
   </div>
 </template>
 
@@ -24,6 +24,14 @@
 export default {
   name: 'modal',
   props: {
+    modalId: {
+      type: String,
+      required: true
+    },
+    modalLabel: {
+      type: String,
+      required: true
+    },
     modalLocation: {
       type: String,
       default: 'body'
@@ -37,6 +45,11 @@ export default {
     return {
       modalOpen: false,
       isMounted: false
+    }
+  },
+  methods: {
+    triggerModal() {
+      this.modalOpen = !this.modalOpen;
     }
   },
   mounted(){
