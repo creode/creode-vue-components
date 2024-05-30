@@ -43,8 +43,7 @@ export default {
   },
   data() {
     return {
-      modalOpen: false,
-      isMounted: false
+      modalOpen: false
     }
   },
   methods: {
@@ -52,8 +51,5 @@ export default {
       this.modalOpen = !this.modalOpen;
     }
   },
-  mounted(){
-    this.isMounted = true;
-  }
 }
 </script>
