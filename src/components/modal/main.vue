@@ -31,14 +31,6 @@ export default {
     modalLabel: {
       type: String,
       required: true
-    },
-    modalLocation: {
-      type: String,
-      default: 'body'
-    },
-    overlayLocation: {
-      type: String,
-      default: 'body'
     }
   },
   data() {
