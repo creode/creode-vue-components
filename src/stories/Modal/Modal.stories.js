@@ -15,7 +15,7 @@ export default {
   }
 };
 
-const Default = (args) => ({
+const template = (args) => ({
   components: { Modal },
   setup() {
     return { args };
@@ -30,4 +30,4 @@ const Default = (args) => ({
   `,
 });
 
-export const WithItems = Default.bind({});
+export const SearchForm = template.bind({});
