@@ -56,16 +56,6 @@
 }
 
 @mixin animations() {
-    .model-content-enter-active,
-    .model-content-leave-active {
-        transition: opacity 0.5s ease;
-    }
-
-    .model-content-enter-from,
-    .model-content-leave-to {
-        opacity: 0;
-    }
-
     .model-overlay-enter-active,
     .model-overlay-leave-active {
         transition: opacity 0.5s ease;
