@@ -13,7 +13,8 @@
   import { provide, ref } from 'vue';
   export default {
     name: 'tabbed-content',
-    setup() {
+    emits: ['tab-changed'],
+    setup(_, { emit }) {
       const openItemIndex = ref(0);
 
       const tabToggle = index => {
@@ -22,6 +23,7 @@
         }
 
         openItemIndex.value = index; // Open the clicked tab
+        emit('tab-changed', index); // Emit the tab-changed event with the new index
       };
       
       provide('tabToggle', tabToggle);
