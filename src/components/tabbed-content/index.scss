@@ -11,6 +11,10 @@
         position: relative;
     }
 
+    .tabbed_content__tabs {
+        overflow-x: scroll;
+    }
+
     .hide-content {
         visibility: hidden;
         position: absolute;
