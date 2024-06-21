@@ -1,14 +1,17 @@
 <template>
   <div class="modal">
     <div class="modal__trigger">
-      <a href="#{{ modalId }}" @click.prevent="triggerModal" title="Open Modal">
+      <a class="modal__trigger-link" :href="'#' + modalId" @click.prevent="triggerModal" title="Open Modal" v-if="!disabled">
         <slot name="trigger-content"></slot>
       </a>
+      <span class="modal__trigger-link--disabled" v-else>
+        <slot name="trigger-content"></slot>
+      </span>
     </div>
 
     <Transition name="model-overlay">
       <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
-        <div role="dialog" :id="modalId" aria-labelledby="{{ modalId }}_label" aria-model="true" class="modal__content" v-if="modalOpen">
+        <div role="dialog" :id="modalId" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-if="modalOpen">
           <div class="modal__close-wrapper">
             <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
           </div>
@@ -27,6 +30,10 @@ export default {
       type: String,
       required: true
     },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
   },
   data() {
     return {
