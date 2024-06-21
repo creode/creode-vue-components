@@ -4,7 +4,7 @@
       <a class="modal__trigger-link" :href="'#' + modalId" @click.prevent="triggerModal" title="Open Modal" v-if="!disabled">
         <slot name="trigger-content"></slot>
       </a>
-      <span class="modal__trigger-link--disabled" v-else>
+      <span class="modal__trigger-link modal__trigger-link--disabled" v-else>
         <slot name="trigger-content"></slot>
       </span>
     </div>
