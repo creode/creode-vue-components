@@ -11,7 +11,7 @@
 				<div class="header__section header__section--menu" :class="{ 'header__section--desktop-menu': isDesktopScreen() }" v-if="$slots.menu">
 					<div class="header__menu-toggle-wrapper" :hidden="isDesktopScreen()">
 						<input id="header-menu-toggle" type="checkbox" class="header__menu-toggle" v-model="menuExpanded" v-on:keyup.enter="menuToggleOnEnter" hidden>
-						<label for="header-menu-toggle" class="header__menu-toggle-label" role="button" aria-haspopup="menu" :aria-expanded="menuExpanded" aria-controls="header-menu">
+						<label for="header-menu-toggle" class="header__menu-toggle-label" aria-haspopup="menu" :aria-expanded="menuExpanded" aria-controls="header-menu">
 							{{ menuExpanded ? 'Close menu' : 'Open menu' }}
 						</label>
 					</div>
