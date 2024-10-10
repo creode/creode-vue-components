@@ -8,17 +8,30 @@
         <slot name="trigger-content"></slot>
       </span>
     </div>
-
-    <Transition name="model-overlay">
-      <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
-        <div role="dialog" :id="modalId" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-if="modalOpen">
-          <div class="modal__close-wrapper">
-            <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
+    <Teleport v-if="teleport" :to="teleport">
+      <Transition name="model-overlay">
+        <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
+          <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-if="modalOpen">
+            <div class="modal__close-wrapper">
+              <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
+            </div>
+            <slot></slot>
           </div>
-          <slot></slot>
         </div>
-      </div>
-    </Transition>
+      </Transition>
+    </Teleport>
+    <div v-else>
+      <Transition name="model-overlay">
+        <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
+          <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-if="modalOpen">
+            <div class="modal__close-wrapper">
+              <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
+            </div>
+            <slot></slot>
+          </div>
+        </div>
+      </Transition>
+    </div>
   </div>
 </template>
 
@@ -30,10 +43,18 @@ export default {
       type: String,
       required: true
     },
+    modalClass: {
+      type: String,
+      required: false
+    },
     disabled: {
       type: Boolean,
       default: false
-    }
+    },
+    teleport: {
+      type: String,
+      default: null
+    },
   },
   data() {
     return {
@@ -43,13 +64,17 @@ export default {
   methods: {
     triggerModal() {
       this.modalOpen = !this.modalOpen;
+      this.$emit('update:modalOpen', this.modalOpen);
     },
     dismissOverlayClick(e) {
       if ( ! e.target.classList.contains('modal__overlay')) {
         return;
       }
-
-      this.modalOpen = false;
+      this.closeModal();
+    },
+    closeModal() {
+        this.modalOpen = false;
+        this.$emit('update:modalOpen', this.modalOpen);
     }
   },
 }
