@@ -42,5 +42,6 @@
     "storybook": "storybook dev -p 6006",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module"
+  "type": "module",
+  "version": "1.13.0"
 }
