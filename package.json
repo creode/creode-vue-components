@@ -1,34 +1,11 @@
 {
-  "_from": "creode-components@1.4.0",
-  "_inBundle": false,
-  "_integrity": "sha512-FnJHU76g3FLkJF/UvmuRMcxV6CgyzFvzuUHrR/vFB3VS8CHC0Gifql2t3I2q8nEIumCHxi2ZWFkSdLHxS4DR2Q==",
-  "_location": "/creode-components",
-  "_phantomChildren": {},
-  "_requested": {
-    "type": "version",
-    "registry": true,
-    "raw": "creode-components@1.4.0",
-    "name": "creode-components",
-    "escapedName": "creode-components",
-    "rawSpec": "1.4.0",
-    "saveSpec": null,
-    "fetchSpec": "1.4.0"
-  },
-  "_requiredBy": [
-    "#USER",
-    "/"
-  ],
-  "_resolved": "https://registry.npmjs.org/creode-components/-/creode-components-1.4.0.tgz",
-  "_shasum": "8f2d74119c5b82a5f216ef5cb5bbd8168fb8cf95",
-  "_spec": "creode-components@1.4.0",
-  "_where": "/Users/benleonard/Development/Creode/creode-component-library-boilerplate",
   "author": {
     "name": "Creode Limited",
     "email": "dev@creode.co.uk",
     "url": "https://www.creode.co.uk/"
   },
-  "bundleDependencies": [],
   "dependencies": {
+    "creode-components": "^2.4.1",
     "vue": "^3.3.4"
   },
   "deprecated": false,
@@ -59,12 +36,11 @@
   "keywords": [],
   "license": "ISC",
   "main": "index.js",
-  "name": "creode-components",
+  "name": "creode-vue-components",
   "scripts": {
     "build-storybook": "storybook build",
     "storybook": "storybook dev -p 6006",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "type": "module",
-  "version": "1.12.0"
+  "type": "module"
 }

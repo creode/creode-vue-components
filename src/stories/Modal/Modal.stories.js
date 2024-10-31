@@ -1,6 +1,6 @@
 import Modal from '../../components/modal/main.vue';
 
-import '../../components/modal/scss/render.scss';
+import '../../../node_modules/creode-components/src/components/modal/scss/render.scss';
 
 export default {
   title: 'Creode/Modal',

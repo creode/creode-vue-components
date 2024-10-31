@@ -2,7 +2,7 @@ import TabbedContent from '../../components/tabbed-content/main.vue';
 import Content from '../../components/tabbed-content/sub-components/content.vue';
 import Tab from '../../components/tabbed-content/sub-components/tab.vue';
 
-import '../../components/tabbed-content/scss/render.scss';
+import '../../../node_modules/creode-components/src/components/tabbed-content/scss/render.scss';
 
 export default {
   title: 'Creode/TabbedContent',

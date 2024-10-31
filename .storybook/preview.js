@@ -1,8 +1,8 @@
 /** @type { import('@storybook/vue3').Preview } */
 import '../src/styles/entrypoint.scss';
 
-import '../src/components/globals.scss';
-import '../src/components/accordion/index.scss';
+import '../node_modules/creode-components/src/components/globals.scss';
+import '../node_modules/creode-components/src/components/accordion/index.scss';
 
 const preview = {
   parameters: {

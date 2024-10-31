@@ -1,4 +1,4 @@
-@use './../components/accordion';
+@use '../../node_modules/creode-components/src/components/accordion/index.scss' as accordion;
 
 @include accordion.configure();
 @include accordion.render();
