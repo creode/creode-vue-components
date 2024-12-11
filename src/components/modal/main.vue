@@ -61,6 +61,9 @@ export default {
       modalOpen: false
     }
   },
+  mounted: function() {
+    document.addEventListener('keydown', this.dismissOverlayEsc);
+  },
   methods: {
     triggerModal() {
       this.modalOpen = !this.modalOpen;
@@ -75,6 +78,17 @@ export default {
     closeModal() {
         this.modalOpen = false;
         this.$emit('update:modalOpen', this.modalOpen);
+    },
+    dismissOverlayEsc(e) {
+      if (!this.modalOpen) {
+        return;
+      }
+
+      if (e.key !== 'Escape') {
+        return;
+      }
+
+      this.closeModal();
     }
   },
 }
