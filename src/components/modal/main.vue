@@ -1,7 +1,7 @@
 <template>
   <div class="modal">
     <div class="modal__trigger--wrapper">
-      <a class="modal__trigger-link" :href="'#' + modalId" @click.prevent="triggerModal" title="Open Modal" v-if="!disabled">
+      <a :id="modalId + '_label'" class="modal__trigger-link" :href="'#' + modalId" @click.prevent="triggerModal" title="Open Modal" v-if="!disabled">
         <slot name="trigger-content"></slot>
       </a>
       <span class="modal__trigger-link modal__trigger-link--disabled" v-else>
@@ -11,7 +11,7 @@
     <Teleport v-if="teleport" :to="teleport">
       <Transition name="model-overlay">
         <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
-          <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-if="modalOpen">
+          <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-show="modalOpen">
             <div class="modal__close-wrapper">
               <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
             </div>
@@ -23,7 +23,7 @@
     <div v-else>
       <Transition name="model-overlay">
         <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
-          <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-if="modalOpen">
+          <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-show="modalOpen">
             <div class="modal__close-wrapper">
               <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
             </div>
