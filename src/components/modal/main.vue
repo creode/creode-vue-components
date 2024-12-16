@@ -13,7 +13,7 @@
         <div class="modal__overlay" v-show="modalOpen" @click="dismissOverlayClick">
           <div role="dialog" :id="modalId" :class="modalClass" :aria-labelledby="modalId + '_label'" aria-model="true" class="modal__content" v-show="modalOpen">
             <div class="modal__close-wrapper">
-              <button class="modal__close" title="Close Modal" @click.prevent="modalOpen = false"><slot name="close-icon">X</slot></button>
+              <button class="modal__close" title="Close Modal" @click.prevent="closeModal"><slot name="close-icon">X</slot></button>
             </div>
             <slot></slot>
           </div>
